@@ -76,7 +76,7 @@ const FindDonors = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Mobile Header - Updated to match other pages */}
+      {/* Mobile Header */}
       <section className="bg-white pt-4 pb-6">
         <div className="container mx-auto px-4 max-w-md">
           <div className="text-center mb-6">

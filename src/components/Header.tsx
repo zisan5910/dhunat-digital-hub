@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Heart, Users, Search, Plus, Building2, Award, HeartHandshake, Bell, Info, Phone, Home, Droplet, Code } from 'lucide-react';
@@ -196,7 +195,6 @@ const Header = () => {
                       className="flex items-center gap-3 p-4 rounded-xl text-sm font-medium transition-all duration-200 bg-gray-50 text-gray-700 hover:bg-red-50 hover:text-red-600"
                     >
                       <Code className="h-4 w-4" />
-                      <span>ডেভেলপার</span>
                     </a>
                   </div>
                 </div>
