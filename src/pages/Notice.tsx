@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Bell, Calendar, AlertTriangle, Info, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -133,28 +132,6 @@ const Notice = () => {
                 এখনই সাবস্ক্রাইব করুন
               </a>
             </Button>
-          </CardContent>
-        </Card>
-
-        {/* Contact Information */}
-        <Card className="shadow-sm border-0 bg-white pb-6">
-          <CardContent className="p-4 text-center">
-            <h3 className="font-bold text-gray-900 mb-2">আরও তথ্যের জন্য যোগাযোগ করুন</h3>
-            <p className="text-gray-600 text-sm mb-3">এই নোটিশ সম্পর্কে আরও বিস্তারিত জানতে আমাদের তথ্য ডেস্কে যোগাযোগ করুন:</p>
-            <div className="space-y-2">
-              <a
-                href="tel:01722528164"
-                className="flex items-center justify-center gap-2 bg-blood-600 text-white px-4 py-2.5 rounded-xl hover:bg-blood-700 transition-colors font-medium text-sm"
-              >
-                ফোন: ০১৭২২-৫২৮১৬৪
-              </a>
-              <a
-                href="mailto:bobdo5800@gmail.com"
-                className="flex items-center justify-center gap-2 bg-blood-100 text-blood-700 px-4 py-2.5 rounded-xl hover:bg-blood-200 transition-colors font-medium text-sm"
-              >
-                ইমেইল: bobdo5800@gmail.com
-              </a>
-            </div>
           </CardContent>
         </Card>
       </div>

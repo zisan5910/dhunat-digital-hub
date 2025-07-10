@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Search, MapPin, Phone, Clock, Users, Filter, Heart, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -77,28 +76,24 @@ const FindDonors = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-6xl mx-auto px-4 py-6">
-          <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-              <img 
-                src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
-                alt="BOBDO Logo" 
-                className="h-12 w-12 object-contain"
-              />
+      {/* Mobile Header - Updated to match other pages */}
+      <section className="bg-white pt-4 pb-6">
+        <div className="container mx-auto px-4 max-w-md">
+          <div className="text-center mb-6">
+            <div className="w-16 h-16 bg-blood-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Search className="h-8 w-8 text-blood-600" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">ডোনার খুঁজুন</h1>
-            <p className="text-gray-600">প্রয়োজনীয় রক্তের গ্রুপ ও এলাকা নির্বাচন করুন</p>
+            <h1 className="text-xl font-bold text-gray-900 mb-2">ডোনার খুঁজুন</h1>
+            <p className="text-sm text-gray-600">প্রয়োজনীয় রক্তের গ্রুপ ও এলাকা নির্বাচন করুন</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 max-w-md space-y-4">
         {/* Quick Blood Group Selection */}
         <div className="mb-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-3">দ্রুত খুঁজুন</h2>
-          <div className="grid grid-cols-4 md:grid-cols-8 gap-2">
+          <div className="grid grid-cols-4 gap-2">
             {bloodGroups.map((group) => (
               <Button
                 key={group}
@@ -113,7 +108,7 @@ const FindDonors = () => {
         </div>
 
         {/* Advanced Search Form */}
-        <Card className="mb-8 shadow-lg border-0">
+        <Card className="mb-8 shadow-sm border-0">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-lg">
               <Search className="h-5 w-5 text-red-600" />
@@ -121,7 +116,7 @@ const FindDonors = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="space-y-4 mb-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   রক্তের গ্রুপ
@@ -169,7 +164,7 @@ const FindDonors = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex gap-3">
               <Button 
                 className="flex-1 h-12 bg-red-600 hover:bg-red-700 text-white"
                 onClick={handleSearch}
@@ -200,9 +195,9 @@ const FindDonors = () => {
             <h2 className="text-xl font-bold text-gray-900 mb-6">
               খোঁজার ফলাফল ({searchResults.length} জন ডোনার পাওয়া গেছে)
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="space-y-4">
               {searchResults.map((donor) => (
-                <Card key={donor.id} className="hover:shadow-lg transition-shadow border-0 shadow-md">
+                <Card key={donor.id} className="hover:shadow-md transition-shadow border-0 shadow-sm">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -258,9 +253,9 @@ const FindDonors = () => {
         {searchResults.length === 0 && (
           <div className="mb-8">
             <h2 className="text-xl font-bold text-gray-900 mb-6">সাম্প্রতিক ডোনার</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="space-y-4">
               {allDonors.slice(0, 6).map((donor) => (
-                <Card key={donor.id} className="hover:shadow-lg transition-shadow border-0 shadow-md">
+                <Card key={donor.id} className="hover:shadow-md transition-shadow border-0 shadow-sm">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -344,7 +339,7 @@ const FindDonors = () => {
             <p className="mb-4 opacity-90">
               ডোনার খুঁজে পেতে সমস্যা হলে সরাসরি যোগাযোগ করুন
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col gap-3 justify-center">
               <a
                 href="tel:01722528164"
                 className="bg-white text-red-600 px-6 py-3 rounded-lg font-medium hover:bg-red-50 transition-colors"

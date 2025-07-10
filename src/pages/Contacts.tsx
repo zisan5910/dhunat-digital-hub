@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Mail,
@@ -73,16 +72,13 @@ const Contacts = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* App Header */}
-      <section className="bg-white py-4">
+      <section className="bg-white pt-4 pb-6">
         <div className="container mx-auto px-4 max-w-md text-center">
-          <div className="w-16 h-16 mx-auto mb-3">
-            <img 
-              src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
-              alt="BOBDO Logo" 
-              className="h-full w-full object-contain"
-            />
+          <div className="w-16 h-16 bg-blood-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <Phone className="h-8 w-8 text-blood-600" />
           </div>
-          <h1 className="text-lg font-bold text-gray-900">যোগাযোগ করুন</h1>
+          <h1 className="text-xl font-bold text-gray-900 mb-2">যোগাযোগ করুন</h1>
+          <p className="text-sm text-gray-600">আমাদের সাথে যোগাযোগ করুন এবং আপনার প্রশ্নের উত্তর পান</p>
         </div>
       </section>
 
@@ -178,11 +174,10 @@ const Contacts = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg"
+                  className="bg-green-600 hover:bg-green-700 text-white w-10 h-10 p-0 rounded-lg"
                   onClick={() => window.open('tel:01780703075', '_self')}
                 >
-                  <Phone className="h-4 w-4 mr-1" />
-                  কল করুন
+                  <Phone className="h-4 w-4" />
                 </Button>
               </div>
 
@@ -199,11 +194,10 @@ const Contacts = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg"
+                  className="bg-red-600 hover:bg-red-700 text-white w-10 h-10 p-0 rounded-lg"
                   onClick={() => window.open('tel:01722528164', '_self')}
                 >
-                  <Phone className="h-4 w-4 mr-1" />
-                  কল করুন
+                  <Phone className="h-4 w-4" />
                 </Button>
               </div>
 
@@ -220,11 +214,10 @@ const Contacts = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 p-0 rounded-lg"
                   onClick={() => window.open('mailto:bobdo5800@gmail.com', '_self')}
                 >
-                  <Mail className="h-4 w-4 mr-1" />
-                  ইমেইল করুন
+                  <Mail className="h-4 w-4" />
                 </Button>
               </div>
 
@@ -241,41 +234,43 @@ const Contacts = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-lg"
+                  className="bg-purple-600 hover:bg-purple-700 text-white w-10 h-10 p-0 rounded-lg"
                   onClick={() => window.open('mailto:ridoan.zisan@gmail.com', '_self')}
                 >
-                  <Mail className="h-4 w-4 mr-1" />
-                  ইমেইল করুন
+                  <Mail className="h-4 w-4" />
                 </Button>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Address & Working Hours */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Card className="shadow-sm border-0">
-            <CardContent className="p-6 text-center">
-              <div className="w-12 h-12 bg-blood-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <MapPin className="h-6 w-6 text-blood-600" />
+        {/* Address & Working Hours - Made compact */}
+        <Card className="shadow-sm border-0">
+          <CardContent className="p-6">
+            <h3 className="text-base font-semibold text-gray-900 mb-4 text-center">অন্যান্য তথ্য</h3>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-blood-100 rounded-lg flex items-center justify-center">
+                  <MapPin className="h-4 w-4 text-blood-600" />
+                </div>
+                <div>
+                  <span className="text-sm font-medium">ঠিকানা:</span>
+                  <span className="text-sm text-gray-600 ml-1">সাতমাথা, বগুড়া, বাংলাদেশ</span>
+                </div>
               </div>
-              <h3 className="text-base font-semibold text-gray-900 mb-2">ঠিকানা</h3>
-              <p className="text-gray-600 text-sm">সাতমাথা, বগুড়া</p>
-              <p className="text-gray-600 text-sm">বাংলাদেশ</p>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-sm border-0">
-            <CardContent className="p-6 text-center">
-              <div className="w-12 h-12 bg-blood-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-6 w-6 text-blood-600" />
+              
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-blood-100 rounded-lg flex items-center justify-center">
+                  <Clock className="h-4 w-4 text-blood-600" />
+                </div>
+                <div>
+                  <span className="text-sm font-medium">কর্মঘণ্টা:</span>
+                  <span className="text-sm text-gray-600 ml-1">জরুরি সেবা ২৪/৭ উপলব্ধ</span>
+                </div>
               </div>
-              <h3 className="text-base font-semibold text-gray-900 mb-2">কর্মঘণ্টা</h3>
-              <p className="text-gray-600 text-sm">জরুরি সেবা</p>
-              <p className="text-gray-600 text-sm">২৪/৭ উপলব্ধ</p>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Google Map */}
         <Card className="shadow-sm border-0">

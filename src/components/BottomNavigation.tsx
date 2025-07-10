@@ -31,7 +31,7 @@ const BottomNavigation = () => {
     },
     {
       id: 'find-donors',
-      label: 'রক্তদাতা খুঁজুন',
+      label: 'ডোনার খুঁজুন',
       icon: Search,
       path: '/find-donors',
       isActive: location.pathname === '/find-donors'
@@ -58,10 +58,10 @@ const BottomNavigation = () => {
                 href={item.path}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center space-y-1 transition-colors duration-200 text-gray-600 hover:text-red-600 hover:bg-red-50"
+                className="flex flex-col items-center justify-center space-y-1 transition-colors duration-200 text-gray-600 hover:text-blood-600 hover:bg-blood-50 px-1"
               >
-                <Icon className="h-5 w-5" />
-                <span className="text-xs font-medium">{item.label}</span>
+                <Icon className="h-5 w-5 flex-shrink-0" />
+                <span className="text-xs font-medium leading-tight text-center">{item.label}</span>
               </a>
             );
           }
@@ -70,14 +70,14 @@ const BottomNavigation = () => {
             <Link
               key={item.id}
               to={item.path}
-              className={`flex flex-col items-center justify-center space-y-1 transition-colors duration-200 ${
+              className={`flex flex-col items-center justify-center space-y-1 transition-colors duration-200 px-1 ${
                 item.isActive
-                  ? 'text-red-600 bg-red-50'
-                  : 'text-gray-600 hover:text-red-600 hover:bg-red-50'
+                  ? 'text-blood-600 bg-blood-50'
+                  : 'text-gray-600 hover:text-blood-600 hover:bg-blood-50'
               }`}
             >
-              <Icon className="h-5 w-5" />
-              <span className="text-xs font-medium">{item.label}</span>
+              <Icon className="h-5 w-5 flex-shrink-0" />
+              <span className="text-xs font-medium leading-tight text-center">{item.label}</span>
             </Link>
           );
         })}
