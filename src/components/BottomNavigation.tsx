@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Users, Heart, Search } from 'lucide-react';
+import { Home, Users, Bell, Search, Info } from 'lucide-react';
 
 const BottomNavigation = () => {
   const location = useLocation();
@@ -23,24 +23,31 @@ const BottomNavigation = () => {
       isExternal: true
     },
     {
-      id: 'donate',
-      label: 'রক্তদান',
-      icon: Heart,
-      path: '/donate-blood',
-      isActive: location.pathname === '/donate-blood'
+      id: 'notice',
+      label: 'নোটিশ',
+      icon: Bell,
+      path: '/notice',
+      isActive: location.pathname === '/notice'
     },
     {
-      id: 'find',
-      label: 'খুঁজুন',
+      id: 'find-donors',
+      label: 'রক্তদাতা খুঁজুন',
       icon: Search,
       path: '/find-donors',
       isActive: location.pathname === '/find-donors'
+    },
+    {
+      id: 'about',
+      label: 'আমাদের সম্পর্কে',
+      icon: Info,
+      path: '/about-us',
+      isActive: location.pathname === '/about-us'
     }
   ];
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 safe-area-padding-bottom">
-      <div className="grid grid-cols-4 h-16">
+      <div className="grid grid-cols-5 h-16">
         {navItems.map((item) => {
           const Icon = item.icon;
           

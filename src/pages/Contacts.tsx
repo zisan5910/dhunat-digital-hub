@@ -7,6 +7,7 @@ import {
   Clock,
   Send,
   Code,
+  ExternalLink,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -166,7 +167,9 @@ const Contacts = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-blood-600" />
+                  <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
+                    <Phone className="h-5 w-5 text-green-600" />
+                  </div>
                   <div>
                     <p className="text-sm font-medium">পরিচালক</p>
                     <p className="text-sm text-gray-600">01780-703075</p>
@@ -175,15 +178,19 @@ const Contacts = () => {
                 <Button
                   variant="ghost"
                   size="sm"
+                  className="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg"
                   onClick={() => window.open('tel:01780703075', '_self')}
                 >
+                  <Phone className="h-4 w-4 mr-1" />
                   কল করুন
                 </Button>
               </div>
 
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-blood-600" />
+                  <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
+                    <Phone className="h-5 w-5 text-red-600" />
+                  </div>
                   <div>
                     <p className="text-sm font-medium">জরুরি হটলাইন</p>
                     <p className="text-sm text-gray-600">01722-528164</p>
@@ -192,15 +199,19 @@ const Contacts = () => {
                 <Button
                   variant="ghost"
                   size="sm"
+                  className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg"
                   onClick={() => window.open('tel:01722528164', '_self')}
                 >
+                  <Phone className="h-4 w-4 mr-1" />
                   কল করুন
                 </Button>
               </div>
 
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-blood-600" />
+                  <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <Mail className="h-5 w-5 text-blue-600" />
+                  </div>
                   <div>
                     <p className="text-sm font-medium">ইমেইল</p>
                     <p className="text-sm text-gray-600">bobdo5800@gmail.com</p>
@@ -209,15 +220,19 @@ const Contacts = () => {
                 <Button
                   variant="ghost"
                   size="sm"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg"
                   onClick={() => window.open('mailto:bobdo5800@gmail.com', '_self')}
                 >
+                  <Mail className="h-4 w-4 mr-1" />
                   ইমেইল করুন
                 </Button>
               </div>
 
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Code className="h-5 w-5 text-blood-600" />
+                  <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
+                    <Code className="h-5 w-5 text-purple-600" />
+                  </div>
                   <div>
                     <p className="text-sm font-medium">ডেভলপার সহায়তা</p>
                     <p className="text-sm text-gray-600">ridoan.zisan@gmail.com</p>
@@ -226,8 +241,10 @@ const Contacts = () => {
                 <Button
                   variant="ghost"
                   size="sm"
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-lg"
                   onClick={() => window.open('mailto:ridoan.zisan@gmail.com', '_self')}
                 >
+                  <Mail className="h-4 w-4 mr-1" />
                   ইমেইল করুন
                 </Button>
               </div>
