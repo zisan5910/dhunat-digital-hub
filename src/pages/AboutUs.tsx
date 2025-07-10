@@ -1,14 +1,13 @@
-
 import React from 'react';
-import { Heart, Users, Target, Award, CheckCircle, Star } from 'lucide-react';
+import { Heart, Users, Target, Award, CheckCircle, Star, Droplet } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const AboutUs = () => {
   const achievements = [
-    { icon: <Users className="h-6 w-6 text-blue-600" />, title: '১০০০+', subtitle: 'নিবন্ধিত রক্তদাতা' },
-    { icon: <Heart className="h-6 w-6 text-red-600" />, title: '৫০০+', subtitle: 'সফল রক্তদান' },
-    { icon: <Target className="h-6 w-6 text-green-600" />, title: '২৫+', subtitle: 'রক্তদান ক্যাম্প' },
-    { icon: <Award className="h-6 w-6 text-purple-600" />, title: '৫০+', subtitle: 'স্বেচ্ছাসেবক' },
+    { icon: <Droplet className="h-6 w-6 text-red-600" />, title: '২৫,০০০+', subtitle: 'রক্তদান' },
+    { icon: <Heart className="h-6 w-6 text-pink-600" />, title: '৫,০০০+', subtitle: 'সংরক্ষিত জীবন' },
+    { icon: <Users className="h-6 w-6 text-blue-600" />, title: '২,৫০০+', subtitle: 'নিবন্ধিত দাতা' },
+    { icon: <Award className="h-6 w-6 text-green-600" />, title: '১০০+', subtitle: 'স্বেচ্ছাসেবক' },
   ];
 
   const values = [
