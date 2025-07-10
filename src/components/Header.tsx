@@ -193,10 +193,10 @@ const Header = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-center p-4 rounded-xl text-sm font-medium transition-all duration-200 bg-gray-50 text-gray-700 hover:bg-red-50 hover:text-red-600"
-                      title="ডেভেলপার"
+                      className="flex items-center gap-3 p-4 rounded-xl text-sm font-medium transition-all duration-200 bg-gray-50 text-gray-700 hover:bg-red-50 hover:text-red-600"
                     >
                       <Code className="h-4 w-4" />
+                      <span>ডেভেলপার</span>
                     </a>
                   </div>
                 </div>

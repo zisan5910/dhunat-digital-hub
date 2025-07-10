@@ -76,16 +76,12 @@ const FindDonors = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Mobile Header - Fixed with logo */}
+      {/* Mobile Header - Updated to match other pages */}
       <section className="bg-white pt-4 pb-6">
         <div className="container mx-auto px-4 max-w-md">
           <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <img 
-                src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
-                alt="BOBDO Logo" 
-                className="h-8 w-8 object-contain"
-              />
+            <div className="w-16 h-16 bg-blood-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Search className="h-8 w-8 text-blood-600" />
             </div>
             <h1 className="text-xl font-bold text-gray-900 mb-2">ডোনার খুঁজুন</h1>
             <p className="text-sm text-gray-600">প্রয়োজনীয় রক্তের গ্রুপ ও এলাকা নির্বাচন করুন</p>
@@ -94,15 +90,15 @@ const FindDonors = () => {
       </section>
 
       <div className="container mx-auto px-4 max-w-md space-y-4">
-        {/* Quick Blood Group Selection - Updated with red background and white text */}
+        {/* Quick Blood Group Selection */}
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-3">দ্রুত খোঁজুন</h2>
+          <h2 className="text-lg font-semibold text-gray-900 mb-3">দ্রুত খুঁজুন</h2>
           <div className="grid grid-cols-4 gap-2">
             {bloodGroups.map((group) => (
               <Button
                 key={group}
                 variant={selectedBloodGroup === group ? "default" : "outline"}
-                className={`h-12 ${selectedBloodGroup === group ? 'bg-red-600 hover:bg-red-700 text-white' : 'bg-red-600 hover:bg-red-700 text-white border-red-600'}`}
+                className={`h-12 ${selectedBloodGroup === group ? 'bg-red-600 hover:bg-red-700' : 'hover:bg-red-50 hover:text-red-600'}`}
                 onClick={() => handleQuickSearch(group)}
               >
                 {group}

@@ -31,25 +31,25 @@ const Stats = () => {
         <div className="grid grid-cols-2 gap-3">
           <StatItem
             icon={<Droplet className="h-5 w-5" />}
-            value="১০,০০০+"
+            value="২৫,০০০+"
             label="রক্তদান"
             color="text-red-600"
           />
           <StatItem
             icon={<Heart className="h-5 w-5" />}
-            value="৩০,০০০+"
+            value="৫,০০০+"
             label="সংরক্ষিত জীবন"
             color="text-pink-600"
           />
           <StatItem
             icon={<Users className="h-5 w-5" />}
-            value="৮০০+"
+            value="২,৫০০+"
             label="নিবন্ধিত দাতা"
             color="text-blue-600"
           />
           <StatItem
             icon={<Award className="h-5 w-5" />}
-            value="৫০+"
+            value="১০০+"
             label="স্বেচ্ছাসেবক"
             color="text-green-600"
           />

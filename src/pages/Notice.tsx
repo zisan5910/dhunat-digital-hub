@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Bell, AlertTriangle, Info, MessageCircle } from 'lucide-react';
+import { Bell, Calendar, AlertTriangle, Info, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -10,23 +9,27 @@ const Notice = () => {
       id: 1,
       title: 'রক্তের সংকট',
       category: 'urgent',
+      date: '২৫ ডিসেম্বর, ২০২৪',
       content: 'বর্তমানে আমরা রক্তের গুরুতর সংকটে আছি। রক্তদাতাদের অবিলম্বে প্রয়োজন। আপনি যদি রক্তদানের জন্য উপযুক্ত হন তবে দয়া করে আমাদের যে কোন দান কেন্দ্রে যত দ্রুত সম্ভব আসুন।',
     },
     {
       id: 2,
       title: 'আরো স্বেচ্ছাসেবক প্রয়োজন',
       category: 'announcement',
+      date: '২০ ডিসেম্বর, ২০২৪',
       content: 'আমাদের এই মিশনে কাজ করতে আরও বেশি স্বেচ্ছাসেবক এর প্রয়োজন। যারা আগ্রহী আছেন তারা দয়া করে আমাদের সাথে যোগাযোগ করুন ধন্যবাদ।',
     },
     {
       id: 3,
       title: 'মাসিক মিটিংয়ে উপস্থিত হওয়ার জন্য অনুরোধ',
       category: 'important',
+      date: '১৮ ডিসেম্বর, ২০২৪',
       content: 'স্বেচ্ছাসেবকগণ আপনাদের জন্য প্রতি মাসে যে মাসিক মিটিং এর ব্যবস্থা করা হয় তাতে দয়া করে উপস্থিত থাকবেন এবং মাসিক ভাতা প্রদান করবেন',
     },
     {
       id: 4,
       title: 'আমাদের দাতাদের ধন্যবাদ',
+      date: '১৫ ডিসেম্বর, ২০২৪',
       category: 'announcement',
       content: 'আমরা আমাদের বসন্তকালীন রক্তদান শিবিরে অংশগ্রহণকারী সকল দাতাদের আন্তরিক ধন্যবাদ জানাতে চাই। আপনার উদারতার জন্য আমরা ৫০০ ইউনিটেরও বেশি রক্ত সংগ্রহ করতে পেরেছি যা প্রায় ১,৫০০ জীবন বাঁচাতে সাহায্য করবে!',
     },
@@ -39,7 +42,7 @@ const Notice = () => {
       case 'important':
         return <Info className="h-4 w-4 text-amber-500" />;
       case 'event':
-        return <Bell className="h-4 w-4 text-blue-500" />;
+        return <Calendar className="h-4 w-4 text-blue-500" />;
       default:
         return <Bell className="h-4 w-4 text-green-500" />;
     }
@@ -98,6 +101,7 @@ const Notice = () => {
                   </div>
                   <div className="flex-1">
                     <CardTitle className="text-base mb-1">{notice.title}</CardTitle>
+                    <p className="text-gray-600 text-xs">{notice.date}</p>
                   </div>
                 </div>
                 <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getCategoryClass(notice.category)}`}>
